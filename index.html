@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>月詠（つきよみ）｜霊視鑑定であなたの運命を照らす</title>
+  <meta name="description" content="霊視×タロット×西洋占星術×数秘術。本格鑑定がLINEでいつでも受けられる。月額9,800円で相談し放題。初回無料鑑定実施中。">
+  <meta property="og:title" content="月詠（つきよみ）｜霊視鑑定であなたの運命を照らす">
+  <meta property="og:description" content="霊視×タロット×西洋占星術×数秘術の本格鑑定がLINEで。月額9,800円・相談し放題。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', serif;
+      background: #0a0a1a;
+      color: #e8e0f0;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .text-center { text-align: center; }
+    .gold { color: #d4a853; }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 12px;
+      color: #d4a853;
+      letter-spacing: 0.08em;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #a89cc0;
+      margin-bottom: 48px;
+      letter-spacing: 0.05em;
+    }
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d4a853, transparent);
+      margin: 0 auto 48px;
+    }
+
+    /* ===== STARFIELD BACKGROUND ===== */
+    .starfield {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .starfield span {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle var(--duration) ease-in-out infinite alternate;
+      opacity: 0;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: var(--max-opacity); transform: scale(1); }
+    }
+
+    /* ===== SECTION BASE ===== */
+    section {
+      position: relative;
+      z-index: 1;
+      padding: 80px 0;
+    }
+
+    /* ===== HERO / FIRST VIEW ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 40px 0;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(88, 40, 180, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 80%, rgba(20, 20, 60, 0.8) 0%, transparent 60%),
+        linear-gradient(180deg, #0a0a1a 0%, #12102a 100%);
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-moon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #f5ecd0, #d4a853, #8a6914);
+      box-shadow:
+        0 0 40px rgba(212, 168, 83, 0.4),
+        0 0 80px rgba(212, 168, 83, 0.2),
+        0 0 120px rgba(212, 168, 83, 0.1);
+      animation: moonGlow 4s ease-in-out infinite alternate;
+    }
+    @keyframes moonGlow {
+      0% { box-shadow: 0 0 40px rgba(212,168,83,0.4), 0 0 80px rgba(212,168,83,0.2); }
+      100% { box-shadow: 0 0 60px rgba(212,168,83,0.6), 0 0 120px rgba(212,168,83,0.3); }
+    }
+    .hero-label {
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      color: #a89cc0;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #d4a853;
+      margin-bottom: 8px;
+      text-shadow: 0 0 30px rgba(212, 168, 83, 0.3);
+    }
+    .hero-ruby {
+      font-size: 0.9rem;
+      color: #c0b0d8;
+      letter-spacing: 0.4em;
+      margin-bottom: 24px;
+    }
+    .hero-catch {
+      font-size: 1.15rem;
+      line-height: 2;
+      color: #e0d8f0;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: 0.9rem;
+      color: #a89cc0;
+      margin-bottom: 40px;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .hero-badge {
+      background: rgba(212, 168, 83, 0.12);
+      border: 1px solid rgba(212, 168, 83, 0.3);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      color: #d4a853;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== CTA BUTTON ===== */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #06c755, #04a847);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 16px 40px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(6, 199, 85, 0.3);
+      letter-spacing: 0.05em;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(6, 199, 85, 0.45);
+    }
+    .cta-btn svg { width: 22px; height: 22px; fill: #fff; }
+    .cta-free {
+      display: block;
+      font-size: 0.75rem;
+      margin-top: 10px;
+      color: #a89cc0;
+    }
+
+    /* ===== PROBLEMS SECTION ===== */
+    .problems {
+      background:
+        linear-gradient(180deg, #0a0a1a 0%, #10102a 50%, #0a0a1a 100%);
+    }
+    .problem-list {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .problem-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(168, 156, 192, 0.1);
+    }
+    .problem-item:last-child { border-bottom: none; }
+    .problem-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d4a853;
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+    .problem-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #d0c8e0;
+    }
+    .problem-resolve {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 1.2rem;
+      color: #d4a853;
+      font-weight: 600;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(60, 30, 120, 0.15) 0%, transparent 70%),
+        linear-gradient(180deg, #0a0a1a, #0e0e24, #0a0a1a);
+    }
+    .about-card {
+      background: linear-gradient(135deg, rgba(30, 25, 60, 0.8), rgba(20, 15, 45, 0.9));
+      border: 1px solid rgba(212, 168, 83, 0.15);
+      border-radius: 16px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+    .about-avatar {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%, #3a2070, #1a1040);
+      border: 2px solid rgba(212, 168, 83, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    .about-name {
+      font-size: 1.5rem;
+      color: #d4a853;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .about-name-ruby {
+      font-size: 0.8rem;
+      color: #a89cc0;
+      letter-spacing: 0.3em;
+      margin-bottom: 24px;
+    }
+    .about-desc {
+      font-size: 0.95rem;
+      line-height: 2;
+      color: #c8c0d8;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ===== FEATURES SECTION ===== */
+    .features {
+      background: linear-gradient(180deg, #0a0a1a 0%, #10102a 50%, #0a0a1a 100%);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .feature-card {
+      background: linear-gradient(145deg, rgba(30, 25, 60, 0.7), rgba(15, 12, 35, 0.9));
+      border: 1px solid rgba(212, 168, 83, 0.12);
+      border-radius: 12px;
+      padding: 32px 20px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .feature-card:hover {
+      border-color: rgba(212, 168, 83, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .feature-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #d4a853;
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: #a89cc0;
+    }
+
+    /* ===== FLOW SECTION ===== */
+    .flow {
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(40, 20, 90, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, #0a0a1a, #0e0e24, #0a0a1a);
+    }
+    .flow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .flow-step {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      padding-bottom: 40px;
+    }
+    .flow-step:last-child { padding-bottom: 0; }
+    .flow-step-line {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .flow-step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4a853, #b08930);
+      color: #0a0a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .flow-step-line::after {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: calc(100% - 44px);
+      background: linear-gradient(180deg, rgba(212, 168, 83, 0.4), rgba(212, 168, 83, 0.05));
+    }
+    .flow-step:last-child .flow-step-line::after { display: none; }
+    .flow-step-content {
+      padding-top: 8px;
+    }
+    .flow-step-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #e0d8f0;
+      margin-bottom: 6px;
+    }
+    .flow-step-desc {
+      font-size: 0.85rem;
+      color: #a89cc0;
+      line-height: 1.7;
+    }
+
+    /* ===== EXAMPLE SECTION ===== */
+    .example {
+      background: linear-gradient(180deg, #0a0a1a 0%, #10102a 50%, #0a0a1a 100%);
+    }
+    .chat-window {
+      max-width: 400px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #1a1830, #12102a);
+      border-radius: 20px;
+      border: 1px solid rgba(212, 168, 83, 0.12);
+      overflow: hidden;
+    }
+    .chat-header {
+      background: rgba(30, 25, 55, 0.9);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(168, 156, 192, 0.1);
+    }
+    .chat-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #3a2070, #1a1040);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .chat-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e0d8f0;
+    }
+    .chat-body {
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .chat-msg {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+    .chat-msg.user {
+      align-self: flex-end;
+      background: #06c755;
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-msg.bot {
+      align-self: flex-start;
+      background: rgba(40, 35, 70, 0.9);
+      color: #d0c8e0;
+      border-bottom-left-radius: 4px;
+      border: 1px solid rgba(168, 156, 192, 0.1);
+    }
+    .chat-msg.bot.fortune {
+      font-size: 0.8rem;
+      line-height: 1.9;
+    }
+
+    /* ===== PRICING SECTION ===== */
+    .pricing {
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(60, 30, 120, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, #0a0a1a, #0e0e24, #0a0a1a);
+    }
+    .price-card {
+      max-width: 480px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, rgba(35, 28, 65, 0.9), rgba(18, 14, 40, 0.95));
+      border: 1px solid rgba(212, 168, 83, 0.25);
+      border-radius: 20px;
+      padding: 48px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, transparent, #d4a853, transparent);
+    }
+    .price-label {
+      font-size: 0.85rem;
+      color: #a89cc0;
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+    .price-name {
+      font-size: 1.3rem;
+      color: #d4a853;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .price-amount {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .price-amount .yen { font-size: 1.2rem; vertical-align: top; margin-right: 2px; }
+    .price-amount .tax { font-size: 0.8rem; font-weight: 400; color: #a89cc0; margin-left: 4px; }
+    .price-period {
+      font-size: 0.85rem;
+      color: #a89cc0;
+      margin-bottom: 32px;
+    }
+    .price-features {
+      text-align: left;
+      margin-bottom: 36px;
+    }
+    .price-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(168, 156, 192, 0.08);
+      font-size: 0.9rem;
+      color: #d0c8e0;
+    }
+    .price-feature:last-child { border-bottom: none; }
+    .price-check {
+      color: #d4a853;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .price-free-banner {
+      background: linear-gradient(135deg, rgba(212, 168, 83, 0.15), rgba(212, 168, 83, 0.05));
+      border: 1px solid rgba(212, 168, 83, 0.25);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 32px;
+    }
+    .price-free-text {
+      font-size: 1.1rem;
+      color: #d4a853;
+      font-weight: 600;
+    }
+    .price-free-sub {
+      font-size: 0.8rem;
+      color: #a89cc0;
+      margin-top: 4px;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq {
+      background: linear-gradient(180deg, #0a0a1a 0%, #10102a 50%, #0a0a1a 100%);
+    }
+    .faq-list {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(168, 156, 192, 0.1);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #e0d8f0;
+      padding: 20px 0;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-question:hover { color: #d4a853; }
+    .faq-icon {
+      font-size: 1.2rem;
+      color: #d4a853;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 20px;
+    }
+    .faq-answer p {
+      font-size: 0.85rem;
+      line-height: 1.9;
+      color: #a89cc0;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(88, 40, 180, 0.2) 0%, transparent 60%),
+        linear-gradient(180deg, #0a0a1a, #12102a, #0a0a1a);
+      text-align: center;
+    }
+    .final-cta-title {
+      font-size: 1.5rem;
+      color: #e0d8f0;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+    .final-cta-sub {
+      font-size: 0.9rem;
+      color: #a89cc0;
+      margin-bottom: 40px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      position: relative;
+      z-index: 1;
+      background: #08081a;
+      border-top: 1px solid rgba(168, 156, 192, 0.08);
+      padding: 32px 0;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 16px;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: #706888;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: #d4a853; }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: #504868;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero-title { font-size: 2rem; }
+      .hero-catch { font-size: 1rem; }
+      .section-title { font-size: 1.3rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .price-amount { font-size: 2.4rem; }
+      .about-card { padding: 36px 20px; }
+      .cta-btn { font-size: 0.95rem; padding: 14px 32px; }
+    }
+
+    /* ===== FADE IN ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- STARFIELD -->
+<div class="starfield" id="starfield"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content container">
+    <div class="hero-moon"></div>
+    <p class="hero-label">── 霊視占い師 ──</p>
+    <h1 class="hero-title">月 詠</h1>
+    <p class="hero-ruby">つ き よ み</p>
+    <p class="hero-catch">
+      月の光があなたの運命を照らす。<br>
+      霊視鑑定で、心の奥に眠る答えを導きます。
+    </p>
+    <div class="hero-badges">
+      <span class="hero-badge">霊視鑑定</span>
+      <span class="hero-badge">タロット</span>
+      <span class="hero-badge">西洋占星術</span>
+      <span class="hero-badge">数秘術</span>
+    </div>
+    <p class="hero-sub">LINEで相談するだけ。本格鑑定がいつでもあなたのそばに。</p>
+    <a href="https://lin.ee/t7E0gTx" class="cta-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      初回無料で鑑定を受ける
+    </a>
+    <span class="cta-free">＼ 友だち追加で今すぐ体験 ／</span>
+  </div>
+</section>
+
+<!-- ===== PROBLEMS ===== -->
+<section class="problems fade-in">
+  <div class="container">
+    <h2 class="section-title">こんなお悩みありませんか？</h2>
+    <div class="divider"></div>
+    <div class="problem-list">
+      <div class="problem-item">
+        <span class="problem-icon">🌙</span>
+        <p class="problem-text">彼の本当の気持ちが分からなくて、夜も眠れない</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">🌙</span>
+        <p class="problem-text">転職すべきか、今の仕事を続けるべきか決められない</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">🌙</span>
+        <p class="problem-text">人間関係のストレスで、心が疲れてしまっている</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">🌙</span>
+        <p class="problem-text">占いに行きたいけど、時間もお金もかかりすぎる</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">🌙</span>
+        <p class="problem-text">友達には相談しづらい、でも誰かに聞いてほしい</p>
+      </div>
+    </div>
+    <p class="problem-resolve">
+      ── そのお悩み、月詠が静かに受け止めます ──
+    </p>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about fade-in">
+  <div class="container">
+    <h2 class="section-title">月詠とは</h2>
+    <p class="section-subtitle">── あなた専属の霊視占い師 ──</p>
+    <div class="about-card">
+      <div class="about-avatar">🔮</div>
+      <p class="about-name">月 詠</p>
+      <p class="about-name-ruby">つきよみ</p>
+      <p class="about-desc">
+        月の光に導かれ、あなたの心の奥を見通す霊視占い師。
+        タロットカード、西洋占星術、数秘術を織り交ぜた
+        本格鑑定で、あなただけの答えを紡ぎます。<br><br>
+        穏やかな語り口と深い洞察で、
+        恋愛・仕事・人間関係……
+        どんなお悩みにも寄り添います。<br><br>
+        LINEを開くだけで、いつでもあなたのそばに。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features fade-in">
+  <div class="container">
+    <h2 class="section-title">鑑定の特徴</h2>
+    <p class="section-subtitle">── 4つの占術を組み合わせた本格鑑定 ──</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">👁️</div>
+        <h3 class="feature-title">霊視鑑定</h3>
+        <p class="feature-desc">心の奥に広がる情景を読み取り、あなたの現状と未来を鮮やかに描き出します</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🃏</div>
+        <h3 class="feature-title">タロットリーディング</h3>
+        <p class="feature-desc">カードが示す象徴から、今あなたに必要なメッセージを読み解きます</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⭐</div>
+        <h3 class="feature-title">西洋占星術</h3>
+        <p class="feature-desc">12星座の星の配置から、運命の流れと転機のタイミングを導きます</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔢</div>
+        <h3 class="feature-title">数秘術</h3>
+        <p class="feature-desc">生年月日から算出する個人年数で、今年のテーマと過ごし方を明らかにします</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="flow fade-in">
+  <div class="container">
+    <h2 class="section-title">ご利用の流れ</h2>
+    <p class="section-subtitle">── かんたん3ステップ ──</p>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-step-num">1</div>
+        </div>
+        <div class="flow-step-content">
+          <h3 class="flow-step-title">LINEで友だち追加</h3>
+          <p class="flow-step-desc">ボタンをタップして月詠を友だち追加。<br>登録は無料、たった10秒で完了します。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-step-num">2</div>
+        </div>
+        <div class="flow-step-content">
+          <h3 class="flow-step-title">お悩みをメッセージで送信</h3>
+          <p class="flow-step-desc">恋愛、仕事、人間関係……なんでもOK。<br>思いのままにメッセージを送ってください。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-step-num">3</div>
+        </div>
+        <div class="flow-step-content">
+          <h3 class="flow-step-title">本格鑑定結果が届く</h3>
+          <p class="flow-step-desc">約1分で、霊視×タロット×星座×数秘術を<br>組み合わせた鑑定結果をお届けします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXAMPLE ===== -->
+<section class="example fade-in">
+  <div class="container">
+    <h2 class="section-title">実際の鑑定イメージ</h2>
+    <p class="section-subtitle">── LINEのトーク画面でこのように届きます ──</p>
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="chat-avatar">🔮</div>
+        <span class="chat-name">月詠（つきよみ）</span>
+      </div>
+      <div class="chat-body">
+        <div class="chat-msg user">最近気になる人がいるんですが、この恋はうまくいきますか？</div>
+        <div class="chat-msg bot">🌙 あなたの心の声が届きましたわ。深く視させていただきますね。少しだけお時間をくださいませ✨</div>
+        <div class="chat-msg bot fortune">
+          🔮 鑑定結果をお伝えいたしますわ。<br><br>
+          【霊視】<br>
+          あなたの心の中に、柔らかな桜色の光が見えます。その光はゆっくりと広がり、温かな想いが相手の方にも届き始めている様子……<br><br>
+          【タロット】恋人たちのカード（正位置）<br>
+          深い絆と調和を示すカードが現れました。お二人の間には自然な引力がありますわ。<br><br>
+          【星座】金星が第5ハウスに<br>
+          恋愛運が高まる配置です。4月中旬に大きな転機が訪れるでしょう✨<br><br>
+          【数秘術】個人年数「6」<br>
+          愛と調和の年。パートナーシップに恵まれる時期と見えます🌙
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing fade-in">
+  <div class="container">
+    <h2 class="section-title">料金プラン</h2>
+    <p class="section-subtitle">── 対面鑑定1回分の価格で、ひと月まるごと ──</p>
+    <div class="price-card">
+      <p class="price-label">MONTHLY PLAN</p>
+      <p class="price-name">月詠 プレミアム鑑定</p>
+      <div class="price-free-banner">
+        <p class="price-free-text">🌙 初回1回 無料鑑定つき</p>
+        <p class="price-free-sub">まずはお試しで月詠の鑑定をご体験ください</p>
+      </div>
+      <p class="price-amount"><span class="yen">¥</span>9,800<span class="tax">（税込）</span></p>
+      <p class="price-period">/ 月</p>
+      <div class="price-features">
+        <div class="price-feature">
+          <span class="price-check">✦</span>
+          霊視×タロット×星座×数秘術の本格鑑定
+        </div>
+        <div class="price-feature">
+          <span class="price-check">✦</span>
+          相談回数 無制限（何度でもOK）
+        </div>
+        <div class="price-feature">
+          <span class="price-check">✦</span>
+          24時間いつでも鑑定可能
+        </div>
+        <div class="price-feature">
+          <span class="price-check">✦</span>
+          毎朝の運勢を自動配信
+        </div>
+        <div class="price-feature">
+          <span class="price-check">✦</span>
+          LINEで完結・アプリ不要
+        </div>
+        <div class="price-feature">
+          <span class="price-check">✦</span>
+          いつでも解約OK
+        </div>
+      </div>
+      <a href="https://lin.ee/t7E0gTx" class="cta-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        初回無料で鑑定を受ける
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq fade-in">
+  <div class="container">
+    <h2 class="section-title">よくある質問</h2>
+    <div class="divider"></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>どんな悩みでも相談できますか？</span>
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>はい。恋愛、仕事、人間関係、金運、健康……どのようなお悩みでもお気軽にご相談ください。メッセージを送っていただくだけで、月詠が心を込めて鑑定いたします。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>鑑定結果はどのくらいで届きますか？</span>
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>メッセージ送信後、約1分ほどで鑑定結果をお届けします。深夜でも早朝でも、24時間いつでもご利用いただけます。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>1ヶ月に何回でも相談できますか？</span>
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>はい、相談回数に制限はございません。気になることがあればいつでもお気軽にメッセージをお送りください。追加料金は一切かかりません。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>毎朝届く運勢とは何ですか？</span>
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>ご登録いただくと、毎朝あなたの星座に基づいた今日の運勢メッセージが届きます。一日のスタートを月詠の導きとともにお過ごしいただけます。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>解約はいつでもできますか？</span>
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>はい、いつでも解約可能です。契約期間の縛りや解約金は一切ありません。LINEからお手続きいただけます。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>個人情報は安全ですか？</span>
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>お客様の個人情報およびご相談内容は厳重に管理しており、第三者に開示・提供することはございません。安心してご相談ください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta fade-in">
+  <div class="container">
+    <p class="final-cta-title">
+      月の光に導かれて、<br>あなたの答えを見つけませんか？
+    </p>
+    <p class="final-cta-sub">初回無料鑑定で、月詠の霊視をお試しください</p>
+    <a href="https://lin.ee/t7E0gTx" class="cta-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINE友だち追加で無料鑑定を受ける
+    </a>
+    <span class="cta-free">＼ 登録無料・初回鑑定0円 ／</span>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 月詠（つきよみ） All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Starfield
+  (function() {
+    const sf = document.getElementById('starfield');
+    const count = 80;
+    for (let i = 0; i < count; i++) {
+      const s = document.createElement('span');
+      const size = Math.random() * 2 + 1;
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.setProperty('--duration', (Math.random() * 4 + 2) + 's');
+      s.style.setProperty('--max-opacity', (Math.random() * 0.6 + 0.2));
+      s.style.animationDelay = (Math.random() * 4) + 's';
+      sf.appendChild(s);
+    }
+  })();
+
+  // Fade-in on scroll
+  (function() {
+    const els = document.querySelectorAll('.fade-in');
+    const obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function(el) { obs.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
